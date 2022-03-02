@@ -20,7 +20,7 @@ const Navbar = () => {
         <input type={`search ${search && 'disabled' }`}/>
         <button className='contact'>Contact</button>
       </div>
-    </div>``
+    </div>
   )
 }
 
