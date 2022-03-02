@@ -1,0 +1,76 @@
+// * Navbar Styles
+.navbar {
+  width: 100vw;
+  height: 8vh;
+  // border-bottom: 2px solid #FF5C03;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  
+  .title {
+    width: 20%;
+    font-size: 2.5rem;
+  }
+  
+  .pages {
+    width: 50%;
+    justify-content: center;
+    margin-right: 5%;
+    list-style-type: none;
+
+    li {
+      font-size: 1.25rem;
+      margin: {
+        top: .5rem;
+        bottom: .25rem;
+        left: 1rem;
+        right: 1rem
+      }
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 3px;
+        bottom: -2px;
+        left: 0;
+        background-color: #FF5C03;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+
+  .right {
+    width: 15%;
+  }
+
+}
+
+// * Default Styles
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.disabled {
+  // visibility: hidden;
+}
+
+.orange {
+  color: #FF5C03;
+}
